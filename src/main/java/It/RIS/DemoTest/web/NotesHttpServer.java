@@ -27,8 +27,6 @@ public class NotesHttpServer {
                 exchange -> HttpSupport.sendJson(exchange, 200, Map.of("status", "UP"))
         );
         health.getFilters().add(cors);
-
-        server.createContext("/", new StaticFileHandler(config.staticDir()));
         server.setExecutor(Executors.newVirtualThreadPerTaskExecutor());
     }
 

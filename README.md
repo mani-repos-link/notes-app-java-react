@@ -23,9 +23,3 @@ cd frontend
 npm install
 npm run dev 
 ```
- or just 
-
-```bash
-cd frontend && npm run build && cd ..   # outputs frontend/dist
-java -jar target/NotesTaking.jar        # serves the UI at http://localhost:8080/
-```

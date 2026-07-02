@@ -25,7 +25,8 @@ public final class NotesApplication {
         NoteService service = new DefaultNoteService(repository);
         NotesHttpServer server = new NotesHttpServer(config, service);
 
-        Runtime.getRuntime().addShutdownHook(new Thread(server::stop, "notes-shutdown"));
+        Runtime.getRuntime()
+                .addShutdownHook(new Thread(server::stop, "notes-shutdown"));
         server.start();
 
         LOG.log(Level.INFO, "Notes API listening on http://{0}:{1,number,#} (database: {2})",
