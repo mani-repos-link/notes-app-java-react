@@ -37,7 +37,7 @@ export default function App() {
       <main className="mx-auto max-w-2xl px-4 py-10">
         <header className="mb-6">
           <h1 className="text-3xl font-bold">Notes</h1>
-          <p className="text-slate-500">A tiny note-taking app</p>
+          <p className="text-slate-500">A note-taking app</p>
         </header>
 
         <section className="mb-6 rounded-xl border border-slate-200 bg-white p-5 shadow-sm">

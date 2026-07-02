@@ -11,6 +11,7 @@ interface NoteItemProps {
 export default function NoteItem({ note, onUpdate, onDelete }: NoteItemProps) {
   const [editing, setEditing] = useState(false)
 
+
   async function handleDelete() {
     if (!window.confirm('Delete this note?')) return
     try {
@@ -43,8 +44,7 @@ export default function NoteItem({ note, onUpdate, onDelete }: NoteItemProps) {
         <div className="flex shrink-0 gap-2">
           <button
             onClick={() => setEditing(true)}
-            className="rounded-lg border border-slate-300 px-3 py-1 text-sm hover:bg-slate-100"
-          >
+            className="rounded-lg border border-slate-300 px-3 py-1 text-sm hover:bg-slate-100">
             Edit
           </button>
           <button

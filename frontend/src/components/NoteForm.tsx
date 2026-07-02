@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react'
+import {useState} from 'react'
 import type { NoteInput } from '../types'
 
 interface NoteFormProps {
@@ -19,7 +19,7 @@ export default function NoteForm({ initialValue, submitLabel, onSubmit, onCancel
 
   const isEditing = Boolean(initialValue)
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: any) {
     event.preventDefault()
     setSubmitting(true)
     setError(null)
@@ -37,7 +37,7 @@ export default function NoteForm({ initialValue, submitLabel, onSubmit, onCancel
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-3">
+    <form onSubmit={(e) => handleSubmit(e)} className="flex flex-col gap-3">
       <input
         type="text"
         placeholder="Title"
