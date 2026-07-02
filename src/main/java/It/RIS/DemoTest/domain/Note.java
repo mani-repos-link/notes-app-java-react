@@ -12,13 +12,6 @@ import java.util.Objects;
  */
 public record Note(Long id, String title, String content, Instant createdAt, Instant updatedAt) {
 
-    public Note {
-        Objects.requireNonNull(title, "title");
-        Objects.requireNonNull(content, "content");
-        Objects.requireNonNull(createdAt, "createdAt");
-        Objects.requireNonNull(updatedAt, "updatedAt");
-    }
-
     /**
      * @param title     note title
      * @param content   note body
