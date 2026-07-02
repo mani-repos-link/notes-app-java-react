@@ -1,7 +1,6 @@
 package It.RIS.DemoTest.service;
 
 import It.RIS.DemoTest.domain.Note;
-import It.RIS.DemoTest.service.Impl.DefaultNoteService;
 
 import java.util.List;
 

@@ -8,10 +8,10 @@ public record NoteResponse(Long id, String title, String content, Instant create
 
     public static NoteResponse from(Note note) {
         return new NoteResponse(
-                note.id(),
-                note.title(),
-                note.content(),
-                note.createdAt(),
-                note.updatedAt());
+                note.getId(),
+                note.getTitle(),
+                note.getContent(),
+                note.getCreatedAt(),
+                note.getUpdatedAt());
     }
 }
